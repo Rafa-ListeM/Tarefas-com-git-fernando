@@ -6,68 +6,76 @@ using System.Threading.Tasks;
 
 namespace Aula08
 {
-    internal class Produto
+    public class Endereco
     {
-        private int Id;
-        private string Descricao;
-        private decimal Valor;
+        private string Rua;
+        private string Numero;
+        private string CEP;
+        private string Bairro;
+        private string Cidade;
+        private string Estado;
 
-        public Produto(int id, string descricao, decimal valor)
+        public Endereco(string rua, string numero, string cep, string bairro, string cidade, string estado)
         {
-            Id = id;
-            Descricao = descricao;
-            Valor = valor;
+            Rua = rua;
+            Numero = numero;
+            CEP = cep;
+            Bairro = bairro;
+            Cidade = cidade;
+            Estado = estado;
+        }
+        public void setRua(string rua)
+        {
+            Rua = rua;
+        }
+        public string getRua()
+        {
+            return Rua;
         }
 
-        public int getId( )
-        { 
-            return Id;
-        } 
-
-        public void setId( int id ) 
+        public void setNumero(string numero)
         {
-            if (id > 0)
-            {
-                Id =id;
-            }
+            Numero = numero;
+        }
+        public string getNumero()
+        {
+            return Numero;
         }
 
-        public string getDescricao( ) 
+        public void setCep(string cep)
         {
-            return Descricao;
+            CEP = cep;
+        }
+        public string getCep()
+        {
+            return CEP;
         }
 
-        public void setDescricao(string descricao) 
+        public void setBairro(string bairro)
         {
-           Descricao = descricao;
+            Bairro = bairro;
+        }
+        public string getBairro()
+        {
+            return Bairro;
         }
 
-        public decimal getValor( )
+        public void setEstado(string estado)
         {
-            return  Valor;
+            Estado = estado;
+        }
+        public string getEstado()
+        {
+            return Estado;
         }
 
-        public void setValue( decimal valor )
+        public void setCidade(string cidade)
         {
-            Valor = valor; 
+            Cidade = cidade;
+        }
+        public string getCidade()
+        {
+            return Cidade;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

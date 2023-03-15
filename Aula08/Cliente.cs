@@ -1,46 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tarefa2
+namespace Aula08
 {
-    public class Pessoas
+    public class Cliente
     {
-        public Pessoas(string nome, string cpf, int idade, decimal peso)
+        private int Id;
+        private string Nome;
+        private string Telefone;
+        private Endereco Endereco;
+
+        public Cliente(int id, string nome, string telefone, Endereco endereco)
         {
+            Id = id;
             Nome = nome;
-            CPF = cpf;
-            Idade = idade;
-            Peso = peso;
+            Telefone = telefone;
+            Endereco = endereco;
         }
 
-        private string Nome;
-        private string CPF;
-        private int Idade;
-        private decimal Peso;
+        public void setEndereco(Endereco endereco) 
+        {
+            Endereco = endereco;
+        }
+
+        public string getEndereco() 
+        {
+            return Endereco;
+        }
+
+        public void setId(int id)
+        {
+            Id = id;
+        }
+
+        public int getId()
+        {
+            return Id;
+        }
+
+        public void setNome(string nome)
+        {
+            Nome = nome;
+        }
 
         public string getNome()
         {
-            return "Nome: " + Nome;
+            return Nome;
         }
 
-        public string getCPF()
+        public void setTelefone(string telefone)
         {
-            return "CPF: " + CPF;
+            Telefone = telefone;
         }
 
-        public string getIdade() 
+        public string getTelefone()
         {
-            return "Idade: " + Idade;
-        }
-
-        public string getPeso()
-        {
-            return "Peso: " + Peso;
+            return Telefone;
         }
     }
 }
-
